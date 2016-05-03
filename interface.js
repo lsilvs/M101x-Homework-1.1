@@ -2,8 +2,9 @@
  *  Inserts "doc" into the collection "movies".
  */
 exports.insert = function(db, doc, callback) {
-  // TODO: implement
-  callback(null);
+  db.collection('movies').insert(doc, function(error, result){
+    callback(error);
+  });
 };
 
 /*
